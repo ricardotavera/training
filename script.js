@@ -67,3 +67,11 @@ reset.onclick = function() {
     h1.textContent = "00:00:00";
     seconds = 0; minutes = 0; hours = 0;    // // 
 }
+
+function Mostrar(){
+  document.getElementById("hola").style.display = "block";
+}
+
+function Ocultar(){
+  document.getElementById("hola").style.display = "none";
+}
