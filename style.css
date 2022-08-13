@@ -133,7 +133,7 @@ h2 {
 }
 
 .cronometro h1 {
-    display: flex; 
+   display: flex;
     text-align: center;
     border-radius: 6px;
     max-width: 300px;
@@ -141,6 +141,9 @@ h2 {
     flex-direction: row;
     margin-bottom: 20px;
     background-color: #4a4b4e;
+    color: #f8f9fa;
+    padding: 0px 20px;
+    border-bottom: 3px solid #357ae8;
 
 }
 
@@ -165,21 +168,20 @@ h2 {
 
 
 #iniciar {
-    background-color: #0cc243;
+    color: #0cc243;
 }
 
 #parar {
-    background-color: #dc3545;
+    color: #dc3545;
 }
 
 #reiniciar {
-    background-color: #fff;
-    border: 2px solid #357ae8;
+   
     color: #357ae8;
 }
 
 .boton button:hover {
-    background-color: darkgrey !important;
+    background-color: rgba(169, 169, 169, 0.363) !important;
 
 }
 
