@@ -13,7 +13,7 @@ function addInTable() {
   let today = new Date();
 
 
-  col2.innerHTML = input.value;
+  col2.innerHTML = input.value.toUpperCase();
   col3.innerHTML = today.toLocaleDateString().replace(/[/]/g,'-') + ' ' + today.toLocaleTimeString();
 
   let rows = document.getElementsByTagName('tr')
