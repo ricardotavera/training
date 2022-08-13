@@ -106,15 +106,16 @@ table th {
 }
 
 .btn {
-    outline: none;
+    
     width: 35%;
+    padding: 6px;
 
 }
 
-btn:focus {
-    box-shadow: none !important;
-    border: none !important;
+.btn:focus {
+    outline: none;
 }
+
 
 
 

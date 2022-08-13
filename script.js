@@ -19,15 +19,16 @@ function addInTable() {
   let rows = document.getElementsByTagName('tr')
   text = 'textContent' in document ? 'textContent' : 'innerText';
 
-  for (let i = 0, len = rows.length; i < len; i++) {
-    rows[i+1].children[0][text] = i+1;
+  for (let i = 1, len = rows.length; i < len; i++) {
+    rows[i].children[0][text] = i;
   }
+  
    
  }else{
    alert('Debe escribir algun estado para poder agregar')
  }
 
- input.value = ' '
+ input.value = ''
 }
 
 function deleteRecord() {
@@ -36,6 +37,12 @@ function deleteRecord() {
   
     if( table.rows.length > 0){
       table.deleteRow(0);
+      let rows = document.getElementsByTagName('tr')
+  text = 'textContent' in document ? 'textContent' : 'innerText';
+
+  for (let i = 1, len = rows.length; i < len; i++) {
+    rows[i].children[0][text] = i;
+  }
     }else{
       alert('No hay elementos en la tabla')
     }
