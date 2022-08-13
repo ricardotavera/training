@@ -23,9 +23,11 @@ function addInTable() {
     rows[i+1].children[0][text] = i+1;
   }
    
+ }else{
+   alert('Debe escribir algun estado para poder agregar')
  }
 
- /* input.value = '' */
+ input.value = ' '
 }
 
 function deleteRecord() {
@@ -34,6 +36,8 @@ function deleteRecord() {
   
     if( table.rows.length > 0){
       table.deleteRow(0);
+    }else{
+      alert('No hay elementos en la tabla')
     }
    
   
@@ -56,7 +60,8 @@ function change() // no ';' here
     elem.value = "Tabla";
   }
 }
-var h1 = document.getElementsByTagName('h1')[0];
+
+var h1 = document.getElementById('cron-text');
 var start = document.getElementById('iniciar');
 var stop = document.getElementById('parar');
 var reset = document.getElementById('reiniciar');
@@ -94,13 +99,8 @@ stop.onclick = function() {
 }
 reset.onclick = function() {
     h1.textContent = "00:00:00";
-    seconds = 0; minutes = 0; hours = 0;    // // 
+    sec = 0; min = 0; hrs = 0; 
+       clearTimeout(t)
 }
 
-function Mostrar(){
-  document.getElementById("hola").style.visibility = "block";
-}
 
-function Ocultar(){
-  document.getElementById("hola").style.visibility = "none";
-}
